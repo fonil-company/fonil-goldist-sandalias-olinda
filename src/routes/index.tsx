@@ -549,7 +549,7 @@ function FinalCTA() {
 /* -------------------- FORM -------------------- */
 function LeadForm({ id }: { id?: string }) {
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ nome: "", empresa: "", cnpj: "", email: "", estado: "", cidade: "", whatsapp: "", telefone: "" });
+  const [form, setForm] = useState({ nome: "", cnpj: "", email: "", estado: "", cidade: "", whatsapp: "" });
   const [cidades, setCidades] = useState<{ id: number; nome: string }[]>([]);
 
   useEffect(() => {
@@ -570,7 +570,7 @@ function LeadForm({ id }: { id?: string }) {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!form.nome.trim() || !form.whatsapp.trim()) return;
-    const msg = `Olá! Sou ${form.nome} da empresa ${form.empresa} (CNPJ: ${form.cnpj}) de ${form.cidade}-${form.estado}. E-mail: ${form.email}. WhatsApp: ${form.whatsapp}. Telefone: ${form.telefone}. Quero falar com um consultor da Gol Distribuidora.`;
+    const msg = `Olá! Sou ${form.nome} (CNPJ: ${form.cnpj}) de ${form.cidade}-${form.estado}. E-mail: ${form.email}. WhatsApp: ${form.whatsapp}. Quero falar com um consultor da Gol Distribuidora.`;
     window.open(`${WHATSAPP_URL}&text=${encodeURIComponent(msg)}`, "_blank");
     setSent(true);
   };
@@ -613,7 +613,6 @@ function LeadForm({ id }: { id?: string }) {
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <Field label="Nome" value={form.nome} onChange={upd("nome")} required placeholder="Seu nome completo" />
-              <Field label="Empresa" value={form.empresa} onChange={upd("empresa")} placeholder="Nome da sua loja" />
               <Field label="CNPJ" value={form.cnpj} onChange={upd("cnpj")} placeholder="00.000.000/0000-00" />
               <Field label="E-mail" value={form.email} onChange={upd("email")} type="email" placeholder="seu@email.com" />
               
@@ -656,7 +655,6 @@ function LeadForm({ id }: { id?: string }) {
               </label>
 
               <Field label="WhatsApp" value={form.whatsapp} onChange={upd("whatsapp")} required placeholder="(00) 00000-0000" />
-              <Field label="Telefone" value={form.telefone} onChange={upd("telefone")} placeholder="(00) 0000-0000" />
             </div>
 
             <button type="submit" className="btn-accent w-full justify-center mt-6 py-3.5 text-base">
