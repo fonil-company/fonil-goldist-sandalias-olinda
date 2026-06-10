@@ -14,7 +14,6 @@ import {
   CheckCircle2,
   Instagram,
   Phone,
-  Mail,
   MapPin,
   Award,
   Truck,
@@ -710,7 +709,7 @@ function Field({
 function Footer() {
   return (
     <footer className="bg-foreground text-white/80">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-14 grid md:grid-cols-4 gap-10">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-14 grid md:grid-cols-3 gap-10">
         <div className="md:col-span-2">
           <div className="bg-white inline-block rounded-xl p-3">
             <img src={logoAsset} alt="Gol Distribuidora" className="h-10 w-auto" />
@@ -733,21 +732,11 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-white text-sm font-display font-extrabold uppercase tracking-wider">Contato</h3>
-          <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex items-center gap-2"><Phone className="size-4 text-accent" /> (00) 0000-0000</li>
-            <li className="flex items-center gap-2"><Mail className="size-4 text-accent" /> contato@goldistribuidora.com.br</li>
-            <li className="flex items-center gap-2"><MapPin className="size-4 text-accent" /> Nordeste, Brasil</li>
-          </ul>
-        </div>
-
-        <div>
           <h3 className="text-white text-sm font-display font-extrabold uppercase tracking-wider">Institucional</h3>
           <ul className="mt-4 space-y-2 text-sm">
             <li><a href="#quem-somos" className="hover:text-accent transition">Quem Somos</a></li>
             <li><a href="#beneficios" className="hover:text-accent transition">Benefícios</a></li>
             <li><a href="#instagram" className="hover:text-accent transition">Instagram</a></li>
-            <li><a href="#contato" className="hover:text-accent transition">Contato</a></li>
           </ul>
         </div>
       </div>
