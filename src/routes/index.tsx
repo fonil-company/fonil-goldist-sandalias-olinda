@@ -744,7 +744,7 @@ function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Gol Distribuidora. Todos os direitos reservados.</p>
-          <p>Distribuição exclusiva · Atendimento regional no Nordeste</p>
+          <p>CNPJ 07.693.868/0001-63 · Distribuição exclusiva · Atendimento regional no Nordeste</p>
         </div>
       </div>
     </footer>
